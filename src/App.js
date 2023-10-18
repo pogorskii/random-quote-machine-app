@@ -8,19 +8,17 @@ import Quote from "./components/Quote";
 
 function App() {
   return (
-    <Container className="vh-100 d-flex flex-column justify-content-center align-content-center">
-      <header>
+    <div className="container-fluid p-5 vh-100 d-flex flex-column justify-content-center align-items-center text-bg-light">
+      <header className="mb-4" style={{ maxWidth: "800px" }}>
         <h1 className="header">Get your random quote</h1>
-        <p>Better than a fortune cookie!</p>
+        <p className="lead">Better than a fortune cookie!</p>
       </header>
-      <main>
-        <Card className="p-4" id="quote-box">
-          <figure>
-            <Quote />
-          </figure>
+      <main style={{ maxWidth: "800px" }}>
+        <Card className="p-5 pb-4" id="quote-box">
+          <Quote />
         </Card>
       </main>
-    </Container>
+    </div>
   );
 }
 

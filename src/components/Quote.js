@@ -51,38 +51,41 @@ class Quote extends React.Component {
       return (
         <figure>
           {" "}
-          <blockquote className="blockquote" id="text">
+          <blockquote className="blockquote fs-4" id="text">
             {quote.quote}
           </blockquote>
-          <figcaption className="blockquote-footer" id="author">
-            <cite title="Source Title">{quote.author}</cite>
+          <figcaption className="blockquote-footer text-end" id="author">
+            <cite className="fs-6" title="Quote Author">
+              {quote.author}
+            </cite>
           </figcaption>
-          <button
-            className="btn btn-primary p-2"
-            onClick={this.getQuote}
-            id="new-quote"
-          >
-            New quote
-          </button>
-          <a
-            className="btn btn-primary"
-            title="Tweet this quote!"
-            target="_top"
-            href={`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=%22${quote.quote
-              .replaceAll(" ", "%20")
-              .replaceAll(";", "%3B")
-              .replaceAll(",", "%2C")}%22%20${quote.author.replaceAll(
-              " ",
-              "%20"
-            )}`}
-            id="tweet-quote"
-          >
-            {/* https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=%22It’s%20your%20place%20in%20the%20world%3B%20it’s%20your%20life.%20Go%20on%20and%20do%20all%20you%20can%20with%20it%2C%20and%20make%20it%20the%20life%20you%20want%20to%20live.%22%20Mae%20Jemison */}
-            {/* It’s your place in the world; it’s your life. Go on and do all you can with it, and make it the life you want to live. */}
-            {/* text=%22You%20can%E2%80%99t%20use%20up%20creativity.%20%20The%20more%20you%20use%2C%20the%20more%20you%20have.%22%20Maya%20Angelou */}
-            {/* You can’t use up creativity. The more you use, the more you have. */}
-            <i className="bi-twitter-x" style={{ fontSize: "2rem" }}></i>
-          </a>
+          <div className="d-flex justify-content-between">
+            <a
+              className="btn btn-dark"
+              title="Tweet this quote!"
+              target="_top"
+              href={`https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=%22${quote.quote
+                .replaceAll(" ", "%20")
+                .replaceAll(";", "%3B")
+                .replaceAll(",", "%2C")}%22%20${quote.author.replaceAll(
+                " ",
+                "%20"
+              )}`}
+              id="tweet-quote"
+            >
+              <i
+                className="bi-twitter-x d-flex align-content-center p-2"
+                style={{ fontSize: "1.4rem" }}
+              ></i>
+            </a>
+            <button
+              className="btn btn-primary fw-bold"
+              onClick={this.getQuote}
+              id="new-quote"
+            >
+              New quote
+            </button>
+          </div>
         </figure>
       );
     }
