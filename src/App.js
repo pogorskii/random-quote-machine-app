@@ -13,8 +13,8 @@ function App() {
         <h1 className="header">Get your random quote</h1>
         <p className="lead">Better than a fortune cookie!</p>
       </header>
-      <main style={{ maxWidth: "800px" }}>
-        <Card className="p-5 pb-4" id="quote-box">
+      <main style={{ minWidth: "75%", maxWidth: "800px", minHeight: "300px" }}>
+        <Card className="h-100 p-5 pb-4" id="quote-box">
           <Quote />
         </Card>
       </main>
