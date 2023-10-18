@@ -1,37 +1,21 @@
-import logo from "./logo.svg";
-
-import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 
 import "./App.css";
 
+import Quote from "./components/Quote";
+
 function App() {
   return (
-    <div className="App">
-      <header>
-        <Container className="p-2 bg-light rounded-3">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="header">Weee Wooo Weee Wooo Weee Wooo</h1>
-          <p>First React app – here we gooooo!</p>
-        </Container>
+    <div className="container-fluid p-5 vh-100 d-flex flex-column justify-content-center align-items-center text-bg-light">
+      <header className="mb-4" style={{ maxWidth: "800px" }}>
+        <h1 className="header">Get your random quote</h1>
+        <p className="lead">Better than a fortune cookie!</p>
       </header>
-      <body>
-        <Card className="m-4 p-4">
-          <Card.Body>
-            <Card.Title>
-              <h2>Quote of the Minute</h2>
-            </Card.Title>
-            <Card.Text className="mb-4">
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Button className="p-2 bg-black rounded-3" variant="primary">
-              Go somewhere
-            </Button>
-          </Card.Body>
+      <main style={{ minWidth: "75%", maxWidth: "800px", minHeight: "350px" }}>
+        <Card className="h-100 p-5 pb-4" id="quote-box">
+          <Quote />
         </Card>
-      </body>
+      </main>
     </div>
   );
 }
