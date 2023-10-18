@@ -1,6 +1,4 @@
-import Container from "react-bootstrap/Container";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 
 import "./App.css";
 
@@ -13,7 +11,7 @@ function App() {
         <h1 className="header">Get your random quote</h1>
         <p className="lead">Better than a fortune cookie!</p>
       </header>
-      <main style={{ minWidth: "75%", maxWidth: "800px", minHeight: "300px" }}>
+      <main style={{ minWidth: "75%", maxWidth: "800px", minHeight: "350px" }}>
         <Card className="h-100 p-5 pb-4" id="quote-box">
           <Quote />
         </Card>
