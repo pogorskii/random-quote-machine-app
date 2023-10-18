@@ -49,7 +49,7 @@ class Quote extends React.Component {
       return <p>Loading...</p>;
     } else {
       return (
-        <figure>
+        <figure className="d-flex flex-column h-100">
           {" "}
           <blockquote className="blockquote fs-4" id="text">
             {quote.quote}
@@ -59,7 +59,7 @@ class Quote extends React.Component {
               {quote.author}
             </cite>
           </figcaption>
-          <div className="d-flex justify-content-between">
+          <div className="d-flex justify-content-between mt-auto">
             <a
               className="btn btn-dark"
               title="Tweet this quote!"
